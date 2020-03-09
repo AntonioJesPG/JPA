@@ -22,7 +22,7 @@ public class Venta implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date fecha;
 
-	private float precioVenta;
+	private String precioVenta;
 
 	//bi-directional many-to-one association to Cliente
 	@ManyToOne(fetch=FetchType.LAZY)
@@ -58,12 +58,12 @@ public class Venta implements Serializable {
 		this.fecha = fecha;
 	}
 
-	public float getPrecioVenta() {
+	public String getPrecioVenta() {
 		return this.precioVenta;
 	}
 
-	public void setPrecioVenta(float precioVenta) {
-		this.precioVenta = precioVenta;
+	public void setPrecioVenta(String str) {
+		this.precioVenta = str;
 	}
 
 	public Cliente getCliente() {
